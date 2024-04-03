@@ -31,6 +31,7 @@
 
   <title>Welcome to Durham!</title>
 
+  
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
@@ -141,64 +142,85 @@
       </section>
     </div>
   </div>
-</div>
 
-<div class="py-16" id="welcome">
-  <div class="container px-4 mx-auto">
-    <h2 class="mb-4 text-3xl font-bold font-heading lg:text-5xl">Other hotel options</h2>
+  <div class="container px-4 mx-auto mt-16">
+    <header class="mb-8">
+      <h2 class="text-3xl font-bold font-heading lg:text-5xl">Other hotel options</h2>
+    </header>
 
     <div class="grid gap-8 lg:grid-cols-2 lg:gap-16">
       <div>
         
 
-        <ul class="grid gap-8 lg:grid-cols-2 lg:gap-16">
-          <li class="flex flex-col gap-4">
-            <span class="badge badge-blue">Closest option</span>
-            <br />
-            <a
-              href="https://www.21cmuseumhotels.com/durham/"
-              class="link"
-              target="_blank"
-              rel="noopener noreferrer">21c Museum and Hotel</a>
-              <br />
-              $350/night
-          </li>
-          <li>
-            Most inexpensive and walkable option:
-            <br />
-            <a
-              href="https://www.unscriptedhotels.com/"
-              class="link"
-              target="_blank"
-              rel="noopener noreferrer">Unscripted Durham</a>
-              <br />
-              $226/night
-          </li>
-          <li>
-            Inexpensive and close (but not walkable) option:
-            <br />
-            <a
-              href="https://www.ihg.com/holidayinnexpress/hotels/us/en/durham/rduhm/hoteldetail"
-              class="link"
-              target="_blank"
-              rel="noopener noreferrer">Holiday Inn Express Durham</a>
-            <br />
-            $151/night
-          </li>
-          <li>
-            Nearest Hilton brand option:
-            <br />
-            <a
-              href="https://www.hilton.com/en/hotels/rdumcgi-hilton-garden-inn-durham-university-medical-center/"
-              class="link"
-              target="_blank"
-              rel="noopener noreferrer">Hilton Garden Inn Durham/University Medical Center</a>
-            <br />
-            $191/night
-          </li>
+        <ul class="grid gap-8 lg:grid-cols-2 lg:gap-8">
+          
+            <li class="flex flex-col gap-2 bg-white border-2 border-gray-100 rounded-md">
+              <div class="flex flex-col flex-1 order-1 gap-8 p-4">
+                <a
+                  href="https://www.21cmuseumhotels.com/durham/"
+                  class="text-xl font-semibold reverse-link"
+                  target="_blank"
+                  rel="noopener noreferrer">21c Museum and Hotel</a>
+
+                <span class="mt-auto">
+                  <span class="text-xl font-semibold">$350</span><span>/night</span>
+                </span>
+              </div>
+
+              <span class="block w-full px-4 py-2 text-sm text-blue-900 bg-blue-50 order-0">Closest option</span>
+            </li>
+          
+            <li class="flex flex-col gap-2 bg-white border-2 border-gray-100 rounded-md">
+              <div class="flex flex-col flex-1 order-1 gap-8 p-4">
+                <a
+                  href="https://www.unscriptedhotels.com/"
+                  class="text-xl font-semibold reverse-link"
+                  target="_blank"
+                  rel="noopener noreferrer">Unscripted Durham</a>
+
+                <span class="mt-auto">
+                  <span class="text-xl font-semibold">$226</span><span>/night</span>
+                </span>
+              </div>
+
+              <span class="block w-full px-4 py-2 text-sm text-blue-900 bg-blue-50 order-0">Most inexpensive and walkable option</span>
+            </li>
+          
+            <li class="flex flex-col gap-2 bg-white border-2 border-gray-100 rounded-md">
+              <div class="flex flex-col flex-1 order-1 gap-8 p-4">
+                <a
+                  href="https://www.ihg.com/holidayinnexpress/hotels/us/en/durham/rduhm/hoteldetail"
+                  class="text-xl font-semibold reverse-link"
+                  target="_blank"
+                  rel="noopener noreferrer">Holiday Inn Express Durham</a>
+
+                <span class="mt-auto">
+                  <span class="text-xl font-semibold">$151</span><span>/night</span>
+                </span>
+              </div>
+
+              <span class="block w-full px-4 py-2 text-sm text-blue-900 bg-blue-50 order-0">Inexpensive, close, but not walkable</span>
+            </li>
+          
+            <li class="flex flex-col gap-2 bg-white border-2 border-gray-100 rounded-md">
+              <div class="flex flex-col flex-1 order-1 gap-8 p-4">
+                <a
+                  href="https://www.hilton.com/en/hotels/rdumcgi-hilton-garden-inn-durham-university-medical-center/"
+                  class="text-xl font-semibold reverse-link"
+                  target="_blank"
+                  rel="noopener noreferrer">Hilton Garden Inn Durham/University Medical Center</a>
+
+                <span class="mt-auto">
+                  <span class="text-xl font-semibold">$191</span><span>/night</span>
+                </span>
+              </div>
+
+              <span class="block w-full px-4 py-2 text-sm text-blue-900 bg-blue-50 order-0">Nearest Hilton brand option</span>
+            </li>
+          
         </ul>
 
-        <p class="mt-6">All rates are "the last time we checked" and may be outdated.</p>
+        <p class="mt-6 text-center">All rates are "the last time we checked" and may be outdated.</p>
       </div>
       <figure class="hidden lg:block">
         <img
@@ -213,339 +235,390 @@
   </div>
 </div>
 
+<div class="py-16">
+  <div class="container px-4 mx-auto">
+    <header class="mb-12">
+      <h2 class="mb-6 text-3xl font-bold font-heading lg:text-5xl">Around Durham</h2>
+      <p class="space-y-6 text-xl lg:text-2xl max-w-[65ch]">
+        Public transportation is available via the
+        <a href="https://gotriangle.org/maps-schedules/gotriangle" class="link">GoTriangle</a>
+        and
+        <a href="https://gotriangle.org/maps-schedules/godurham" class="link">GoDurham</a>
+        systems which includes transit via bus to/from the Raleigh-Durham
+        International Airport and the Durham Station (approximately 1/4 mile walk
+        from the station to the hotel). Popular ride sharing services are also
+        available. While you're cruising around town, be sure to check out our
+        favorite spots:
+      </p>
+    </header>
 
+    <div>
+      
 
+      <section>
+        <ul class="grid gap-8 lg:grid-cols-2 lg:gap-16">
+          
+              <li class="flex flex-wrap gap-6">
+                <figure>
+                  <img
+                    src="21c-museum.png"
+                    alt="Photo of 21C Museum, Hotel, and Restaurant"
+                  />
+                </figure>
 
+                <div class="flex flex-col gap-4 lg:flex-1">
+                  <h3 class="text-lg font-semibold">
+                    <a href="https://www.21cmuseumhotels.com/durham/" target="_blank">21C Museum, Hotel, and Restaurant</a>
+                  </h3>
+                  <dl class="flex flex-col gap-4">
+                    <dt class="sr-only">Distance:</dt>
+                    <dd><span class="label">2 blocks (0.1 miles) away</span></dd>
 
-                <h2 class="text-center">Around Durham</h2>
-                <p class="text-center lead column large-10 large-centered">
-                  Public transportation is available via the
-                  <a href="https://gotriangle.org/maps-schedules/gotriangle">GoTriangle</a>
-                  and
-                  <a href="https://gotriangle.org/maps-schedules/godurham">GoDurham</a>
-                  systems which includes transit via bus to/from the Raleigh-Durham
-                  International Airport and the Durham Station (approximately 1/4 mile walk
-                  from the station to the hotel). Popular ride sharing services are also
-                  available. While you're cruising around town, be sure to check out our
-                  favorite spots:
-                </p>
-              </div>
+                    <dt class="sr-only">Address:</dt>
+                    <dd>
+                      <a href="https://goo.gl/maps/sHmC8kuSBycrRfek8" target="_blank">111 Corcoran Street</a>
+                    </dd>
 
-              
+                    <dt class="sr-only">Website:</dt>
+                    <dd>
+                      <a
+                        href="https://www.21cmuseumhotels.com/durham/"
+                        target="_blank"
+                        class="font-bold link">Visit website</a>
+                    </dd>
+                  </dl>
 
-
-
-              <section>
-                <ul>
                   
-                      <li class="">
-                        <div class="">
-                          <a href="https://www.21cmuseumhotels.com/durham/" target="_blank">
-                            <img
-                              src="21c-museum.png"
-                              alt="Photo of 21C Museum, Hotel, and Restaurant"
-                            />
-                          </a>
-                        </div>
-                        <div class="media-object-section">
-                          <h3 class="attraction-name">
-                            <a href="https://www.21cmuseumhotels.com/durham/" target="_blank">21C Museum, Hotel, and Restaurant</a>
-                          </h3>
-                          <p class="attraction-description">
-                            <strong>Website:</strong>
-                            <a href="https://www.21cmuseumhotels.com/durham/" target="_blank"> 21C Museum, Hotel, and Restaurant</a
-                              ><br />
-                              <strong>Distance:</strong>
-                              <span class="label">2 blocks (0.1 miles) away </span><br />
-                              <strong>Address:</strong>
-                              <a href="https://goo.gl/maps/sHmC8kuSBycrRfek8" target="_blank">111 Corcoran Street</a>
-                              <br />
-                              <i></i>
-                            </p>
-                          </div>
-                        </div>
-                    </li>
-                  
-                      <li class="">
-                        <div class="">
-                          <a href="https://theboxcarbar.com/durham/" target="_blank">
-                            <img
-                              src="21c-museum.png"
-                              alt="Photo of Boxcar Bar & Arcade"
-                            />
-                          </a>
-                        </div>
-                        <div class="media-object-section">
-                          <h3 class="attraction-name">
-                            <a href="https://theboxcarbar.com/durham/" target="_blank">Boxcar Bar & Arcade</a>
-                          </h3>
-                          <p class="attraction-description">
-                            <strong>Website:</strong>
-                            <a href="https://theboxcarbar.com/durham/" target="_blank"> Boxcar Bar & Arcade</a
-                              ><br />
-                              <strong>Distance:</strong>
-                              <span class="label">5 blocks (0.4 miles) away </span><br />
-                              <strong>Address:</strong>
-                              <a href="https://goo.gl/maps/1V9XiyibxNzJvs1r6" target="_blank">621 Foster Street</a>
-                              <br />
-                              <i></i>
-                            </p>
-                          </div>
-                        </div>
-                    </li>
-                  
-                      <li class="">
-                        <div class="">
-                          <a href="https://littlewaves.coffee" target="_blank">
-                            <img
-                              src="cocoa-cinnamon.jpg"
-                              alt="Photo of Cocoa Cinnamon Old North Durham"
-                            />
-                          </a>
-                        </div>
-                        <div class="media-object-section">
-                          <h3 class="attraction-name">
-                            <a href="https://littlewaves.coffee" target="_blank">Cocoa Cinnamon Old North Durham</a>
-                          </h3>
-                          <p class="attraction-description">
-                            <strong>Website:</strong>
-                            <a href="https://littlewaves.coffee" target="_blank"> Cocoa Cinnamon Old North Durham</a
-                              ><br />
-                              <strong>Distance:</strong>
-                              <span class="label">6 blocks (0.5 miles) away </span><br />
-                              <strong>Address:</strong>
-                              <a href="https://goo.gl/maps/QppXc5ZG5i3ifGMb7" target="_blank">420 W. Geer Street</a>
-                              <br />
-                              <i>A popular local coffee shop using beans from local roaster Little Waves Coffee Roasters. One of our local organizers recommends that you try the Dr. Durham latte.
-</i>
-                            </p>
-                          </div>
-                        </div>
-                    </li>
-                  
-                      <li class="">
-                        <div class="">
-                          <a href="https://www.everloucoffee.com/" target="_blank">
-                            <img
-                              src="everlou.jpg"
-                              alt="Photo of EverLou Coffee Company"
-                            />
-                          </a>
-                        </div>
-                        <div class="media-object-section">
-                          <h3 class="attraction-name">
-                            <a href="https://www.everloucoffee.com/" target="_blank">EverLou Coffee Company</a>
-                          </h3>
-                          <p class="attraction-description">
-                            <strong>Website:</strong>
-                            <a href="https://www.everloucoffee.com/" target="_blank"> EverLou Coffee Company</a
-                              ><br />
-                              <strong>Distance:</strong>
-                              <span class="label">4 blocks (0.3 miles) away </span><br />
-                              <strong>Address:</strong>
-                              <a href="https://goo.gl/maps/9tZ8CKQp6NXjrN6E6" target="_blank">506 N. Mangum St., Suite 102</a>
-                              <br />
-                              <i></i>
-                            </p>
-                          </div>
-                        </div>
-                    </li>
-                  
-                      <li class="">
-                        <div class="">
-                          <a href="http://www.lunarotisserie.com/" target="_blank">
-                            <img
-                              src="luna-rotisserie.jpg"
-                              alt="Photo of Luna Rotisserie and Empanadas"
-                            />
-                          </a>
-                        </div>
-                        <div class="media-object-section">
-                          <h3 class="attraction-name">
-                            <a href="http://www.lunarotisserie.com/" target="_blank">Luna Rotisserie and Empanadas</a>
-                          </h3>
-                          <p class="attraction-description">
-                            <strong>Website:</strong>
-                            <a href="http://www.lunarotisserie.com/" target="_blank"> Luna Rotisserie and Empanadas</a
-                              ><br />
-                              <strong>Distance:</strong>
-                              <span class="label">1 block (less than 0.1 miles) away </span><br />
-                              <strong>Address:</strong>
-                              <a href="https://goo.gl/maps/hY9DFxEejfoKwvPc8" target="_blank">112 W. Main St</a>
-                              <br />
-                              <i></i>
-                            </p>
-                          </div>
-                        </div>
-                    </li>
-                  
-                      <li class="">
-                        <div class="">
-                          <a href="https://www.neomonde.com/mediterranean-restaurant-durham/" target="_blank">
-                            <img
-                              src="neomonde.png"
-                              alt="Photo of Neomonde Mediterranean"
-                            />
-                          </a>
-                        </div>
-                        <div class="media-object-section">
-                          <h3 class="attraction-name">
-                            <a href="https://www.neomonde.com/mediterranean-restaurant-durham/" target="_blank">Neomonde Mediterranean</a>
-                          </h3>
-                          <p class="attraction-description">
-                            <strong>Website:</strong>
-                            <a href="https://www.neomonde.com/mediterranean-restaurant-durham/" target="_blank"> Neomonde Mediterranean</a
-                              ><br />
-                              <strong>Distance:</strong>
-                              <span class="label">2 blocks (0.1 miles) away </span><br />
-                              <strong>Address:</strong>
-                              <a href="https://goo.gl/maps/jwbJcR6EAQ3y1zG46" target="_blank">202 Corcoran St</a>
-                              <br />
-                              <i></i>
-                            </p>
-                          </div>
-                        </div>
-                    </li>
-                  
-                      <li class="">
-                        <div class="">
-                          <a href="https://theparlour.co/" target="_blank">
-                            <img
-                              src="parlour.jpg"
-                              alt="Photo of The Parlour"
-                            />
-                          </a>
-                        </div>
-                        <div class="media-object-section">
-                          <h3 class="attraction-name">
-                            <a href="https://theparlour.co/" target="_blank">The Parlour</a>
-                          </h3>
-                          <p class="attraction-description">
-                            <strong>Website:</strong>
-                            <a href="https://theparlour.co/" target="_blank"> The Parlour</a
-                              ><br />
-                              <strong>Distance:</strong>
-                              <span class="label">1 block (less than 0.1 miles) away </span><br />
-                              <strong>Address:</strong>
-                              <a href="https://goo.gl/maps/URWTyM8VreJMXRhv7" target="_blank">117 Market St</a>
-                              <br />
-                              <i></i>
-                            </p>
-                          </div>
-                        </div>
-                    </li>
-                  
-                      <li class="">
-                        <div class="">
-                          <a href="https://puresoulff.com/" target="_blank">
-                            <img
-                              src="pure-soul.png"
-                              alt="Photo of Pure Soul"
-                            />
-                          </a>
-                        </div>
-                        <div class="media-object-section">
-                          <h3 class="attraction-name">
-                            <a href="https://puresoulff.com/" target="_blank">Pure Soul</a>
-                          </h3>
-                          <p class="attraction-description">
-                            <strong>Website:</strong>
-                            <a href="https://puresoulff.com/" target="_blank"> Pure Soul</a
-                              ><br />
-                              <strong>Distance:</strong>
-                              <span class="label">4.5 miles away </span><br />
-                              <strong>Address:</strong>
-                              <a href="https://goo.gl/maps/kkAHRkiJzGdoJNHn9" target="_blank">4125 Durham-Chapell Hill Blvd</a>
-                              <br />
-                              <i></i>
-                            </p>
-                          </div>
-                        </div>
-                    </li>
-                  
-                      <li class="">
-                        <div class="">
-                          <a href="http://simonssaysdipthis.com/" target="_blank">
-                            <img
-                              src="simons-says.png"
-                              alt="Photo of Simons Says Dip This"
-                            />
-                          </a>
-                        </div>
-                        <div class="media-object-section">
-                          <h3 class="attraction-name">
-                            <a href="http://simonssaysdipthis.com/" target="_blank">Simons Says Dip This</a>
-                          </h3>
-                          <p class="attraction-description">
-                            <strong>Website:</strong>
-                            <a href="http://simonssaysdipthis.com/" target="_blank"> Simons Says Dip This</a
-                              ><br />
-                              <strong>Distance:</strong>
-                              <span class="label">3 blocks (0.2 miles) away </span><br />
-                              <strong>Address:</strong>
-                              <a href="https://goo.gl/maps/jGbY3SfbhT63wK17A" target="_blank">117 W Parrish St</a>
-                              <br />
-                              <i></i>
-                            </p>
-                          </div>
-                        </div>
-                    </li>
-                  
-                </ul>
-              </section>
-
-
-
-
-
-            <div id="accessibility">
-
-                  <h2>An Accessible Experience</h2>
-                  <p>
-                    We're working with the staff at the Durham Convention Center to
-                    accommodate the diverse needs of our attendees.
-                  </p>
-                  <p>
-                    Are we missing something?
-                    <strong><a href="mailto:hello@djangocon.us">Let us know</a>.</strong>
-                    </p>
-
-
-                    <div>
-                      <ul>
-                        <li>There is step-free access to all parts of the venue.</li>
-                        <li>All public restrooms have accessible stalls.</li>
-                        <li>
-                          The convention center does not provide gender-neutral restrooms.
-                          Please use the restroom for the gender with which you identify.
-                        </li>
-                        <li>
-                          Service animals are welcome, and there is a grassy area outside the
-                          hotel and convention center where they can be walked.
-                        </li>
-                        <li>
-                          The Quiet Room will be available on all conference days. This room
-                          is not for socializing.
-                        </li>
-                        <li>
-                          A Lactation Room will be available as needed Sunday-Wednesday. .
-                          </li>
-
-
-
-                          
-
-
-
-                          <li>
-                            <a href="/news/childcare-at-djangocon-us/">Sponsored childcare</a>
-                            will be provided.
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
                 </div>
+            </li>
+          
+              <li class="flex flex-wrap gap-6">
+                <figure>
+                  <img
+                    src="21c-museum.png"
+                    alt="Photo of Boxcar Bar & Arcade"
+                  />
+                </figure>
+
+                <div class="flex flex-col gap-4 lg:flex-1">
+                  <h3 class="text-lg font-semibold">
+                    <a href="https://theboxcarbar.com/durham/" target="_blank">Boxcar Bar & Arcade</a>
+                  </h3>
+                  <dl class="flex flex-col gap-4">
+                    <dt class="sr-only">Distance:</dt>
+                    <dd><span class="label">5 blocks (0.4 miles) away</span></dd>
+
+                    <dt class="sr-only">Address:</dt>
+                    <dd>
+                      <a href="https://goo.gl/maps/1V9XiyibxNzJvs1r6" target="_blank">621 Foster Street</a>
+                    </dd>
+
+                    <dt class="sr-only">Website:</dt>
+                    <dd>
+                      <a
+                        href="https://theboxcarbar.com/durham/"
+                        target="_blank"
+                        class="font-bold link">Visit website</a>
+                    </dd>
+                  </dl>
+
+                  
+                </div>
+            </li>
+          
+              <li class="flex flex-wrap gap-6">
+                <figure>
+                  <img
+                    src="cocoa-cinnamon.jpg"
+                    alt="Photo of Cocoa Cinnamon Old North Durham"
+                  />
+                </figure>
+
+                <div class="flex flex-col gap-4 lg:flex-1">
+                  <h3 class="text-lg font-semibold">
+                    <a href="https://littlewaves.coffee" target="_blank">Cocoa Cinnamon Old North Durham</a>
+                  </h3>
+                  <dl class="flex flex-col gap-4">
+                    <dt class="sr-only">Distance:</dt>
+                    <dd><span class="label">6 blocks (0.5 miles) away</span></dd>
+
+                    <dt class="sr-only">Address:</dt>
+                    <dd>
+                      <a href="https://goo.gl/maps/QppXc5ZG5i3ifGMb7" target="_blank">420 W. Geer Street</a>
+                    </dd>
+
+                    <dt class="sr-only">Website:</dt>
+                    <dd>
+                      <a
+                        href="https://littlewaves.coffee"
+                        target="_blank"
+                        class="font-bold link">Visit website</a>
+                    </dd>
+                  </dl>
+
+                  <p>A popular local coffee shop using beans from local roaster Little Waves Coffee Roasters. One of our local organizers recommends that you try the Dr. Durham latte.</p>
+
+                </div>
+            </li>
+          
+              <li class="flex flex-wrap gap-6">
+                <figure>
+                  <img
+                    src="everlou.jpg"
+                    alt="Photo of EverLou Coffee Company"
+                  />
+                </figure>
+
+                <div class="flex flex-col gap-4 lg:flex-1">
+                  <h3 class="text-lg font-semibold">
+                    <a href="https://www.everloucoffee.com/" target="_blank">EverLou Coffee Company</a>
+                  </h3>
+                  <dl class="flex flex-col gap-4">
+                    <dt class="sr-only">Distance:</dt>
+                    <dd><span class="label">4 blocks (0.3 miles) away</span></dd>
+
+                    <dt class="sr-only">Address:</dt>
+                    <dd>
+                      <a href="https://goo.gl/maps/9tZ8CKQp6NXjrN6E6" target="_blank">506 N. Mangum St., Suite 102</a>
+                    </dd>
+
+                    <dt class="sr-only">Website:</dt>
+                    <dd>
+                      <a
+                        href="https://www.everloucoffee.com/"
+                        target="_blank"
+                        class="font-bold link">Visit website</a>
+                    </dd>
+                  </dl>
+
+                  
+                </div>
+            </li>
+          
+              <li class="flex flex-wrap gap-6">
+                <figure>
+                  <img
+                    src="luna-rotisserie.jpg"
+                    alt="Photo of Luna Rotisserie and Empanadas"
+                  />
+                </figure>
+
+                <div class="flex flex-col gap-4 lg:flex-1">
+                  <h3 class="text-lg font-semibold">
+                    <a href="http://www.lunarotisserie.com/" target="_blank">Luna Rotisserie and Empanadas</a>
+                  </h3>
+                  <dl class="flex flex-col gap-4">
+                    <dt class="sr-only">Distance:</dt>
+                    <dd><span class="label">1 block (less than 0.1 miles) away</span></dd>
+
+                    <dt class="sr-only">Address:</dt>
+                    <dd>
+                      <a href="https://goo.gl/maps/hY9DFxEejfoKwvPc8" target="_blank">112 W. Main St</a>
+                    </dd>
+
+                    <dt class="sr-only">Website:</dt>
+                    <dd>
+                      <a
+                        href="http://www.lunarotisserie.com/"
+                        target="_blank"
+                        class="font-bold link">Visit website</a>
+                    </dd>
+                  </dl>
+
+                  
+                </div>
+            </li>
+          
+              <li class="flex flex-wrap gap-6">
+                <figure>
+                  <img
+                    src="neomonde.png"
+                    alt="Photo of Neomonde Mediterranean"
+                  />
+                </figure>
+
+                <div class="flex flex-col gap-4 lg:flex-1">
+                  <h3 class="text-lg font-semibold">
+                    <a href="https://www.neomonde.com/mediterranean-restaurant-durham/" target="_blank">Neomonde Mediterranean</a>
+                  </h3>
+                  <dl class="flex flex-col gap-4">
+                    <dt class="sr-only">Distance:</dt>
+                    <dd><span class="label">2 blocks (0.1 miles) away</span></dd>
+
+                    <dt class="sr-only">Address:</dt>
+                    <dd>
+                      <a href="https://goo.gl/maps/jwbJcR6EAQ3y1zG46" target="_blank">202 Corcoran St</a>
+                    </dd>
+
+                    <dt class="sr-only">Website:</dt>
+                    <dd>
+                      <a
+                        href="https://www.neomonde.com/mediterranean-restaurant-durham/"
+                        target="_blank"
+                        class="font-bold link">Visit website</a>
+                    </dd>
+                  </dl>
+
+                  
+                </div>
+            </li>
+          
+              <li class="flex flex-wrap gap-6">
+                <figure>
+                  <img
+                    src="parlour.jpg"
+                    alt="Photo of The Parlour"
+                  />
+                </figure>
+
+                <div class="flex flex-col gap-4 lg:flex-1">
+                  <h3 class="text-lg font-semibold">
+                    <a href="https://theparlour.co/" target="_blank">The Parlour</a>
+                  </h3>
+                  <dl class="flex flex-col gap-4">
+                    <dt class="sr-only">Distance:</dt>
+                    <dd><span class="label">1 block (less than 0.1 miles) away</span></dd>
+
+                    <dt class="sr-only">Address:</dt>
+                    <dd>
+                      <a href="https://goo.gl/maps/URWTyM8VreJMXRhv7" target="_blank">117 Market St</a>
+                    </dd>
+
+                    <dt class="sr-only">Website:</dt>
+                    <dd>
+                      <a
+                        href="https://theparlour.co/"
+                        target="_blank"
+                        class="font-bold link">Visit website</a>
+                    </dd>
+                  </dl>
+
+                  
+                </div>
+            </li>
+          
+              <li class="flex flex-wrap gap-6">
+                <figure>
+                  <img
+                    src="pure-soul.png"
+                    alt="Photo of Pure Soul"
+                  />
+                </figure>
+
+                <div class="flex flex-col gap-4 lg:flex-1">
+                  <h3 class="text-lg font-semibold">
+                    <a href="https://puresoulff.com/" target="_blank">Pure Soul</a>
+                  </h3>
+                  <dl class="flex flex-col gap-4">
+                    <dt class="sr-only">Distance:</dt>
+                    <dd><span class="label">4.5 miles away</span></dd>
+
+                    <dt class="sr-only">Address:</dt>
+                    <dd>
+                      <a href="https://goo.gl/maps/kkAHRkiJzGdoJNHn9" target="_blank">4125 Durham-Chapell Hill Blvd</a>
+                    </dd>
+
+                    <dt class="sr-only">Website:</dt>
+                    <dd>
+                      <a
+                        href="https://puresoulff.com/"
+                        target="_blank"
+                        class="font-bold link">Visit website</a>
+                    </dd>
+                  </dl>
+
+                  
+                </div>
+            </li>
+          
+              <li class="flex flex-wrap gap-6">
+                <figure>
+                  <img
+                    src="simons-says.png"
+                    alt="Photo of Simons Says Dip This"
+                  />
+                </figure>
+
+                <div class="flex flex-col gap-4 lg:flex-1">
+                  <h3 class="text-lg font-semibold">
+                    <a href="http://simonssaysdipthis.com/" target="_blank">Simons Says Dip This</a>
+                  </h3>
+                  <dl class="flex flex-col gap-4">
+                    <dt class="sr-only">Distance:</dt>
+                    <dd><span class="label">3 blocks (0.2 miles) away</span></dd>
+
+                    <dt class="sr-only">Address:</dt>
+                    <dd>
+                      <a href="https://goo.gl/maps/jGbY3SfbhT63wK17A" target="_blank">117 W Parrish St</a>
+                    </dd>
+
+                    <dt class="sr-only">Website:</dt>
+                    <dd>
+                      <a
+                        href="http://simonssaysdipthis.com/"
+                        target="_blank"
+                        class="font-bold link">Visit website</a>
+                    </dd>
+                  </dl>
+
+                  
+                </div>
+            </li>
+          
+        </ul>
+      </section>
+
+    </div>
+  </div>
+</div>
+
+
+<div class="py-16">
+  <div class="container px-4 mx-auto">
+    <header class="mb-12">
+      <h2 class="mb-6 text-3xl font-bold font-heading lg:text-5xl">An Accessible Experience</h2>
+      <div class="space-y-6 text-xl lg:text-2xl max-w-[65ch]">
+        <p>
+          We're working with the staff at the Durham Convention Center to
+          accommodate the diverse needs of our attendees.
+        </p>
+        <p>
+          Are we missing something?
+          <strong><a href="mailto:hello@djangocon.us" class="link">Let us know</a>.</strong>
+        </p>
+      </div>
+    </header>
+
+    <ul class="gap-8 px-4 space-y-8 list-disc lg:gap-16 md:columns-2 lg:columns-3 lg:text-xl *:break-inside-avoid">
+      <li>All public restrooms have accessible stalls.</li>
+      <li>
+        The convention center does not provide gender-neutral restrooms.
+        Please use the restroom for the gender with which you identify.
+      </li>
+      <li>There is step-free access to all parts of the venue.</li>
+      <li>
+        Service animals are welcome, and there is a grassy area outside the
+        hotel and convention center where they can be walked.
+      </li>
+      <li>
+        The Quiet Room will be available on all conference days. This room
+        is not for socializing.
+      </li>
+      <li>
+        A Lactation Room will be available as needed Sunday-Wednesday.
+        
+      </li>
+
+
+
+        
+        <li>
+          <a href="/news/childcare-at-djangocon-us/">Sponsored childcare</a>
+          will be provided.
+        </li>
+      </ul>
+  </div>
+</div>
 </div>
 
   <footer class="bg-gray-200">
