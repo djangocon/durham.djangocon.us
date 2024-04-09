@@ -89,7 +89,7 @@
   <div class="container px-4 mx-auto">
     <section class="flex flex-col gap-4">
       <h1 class="mb-4 text-4xl font-bold lg:text-6xl">
-        Join us for <strong>five days</strong> of inspiration, education, and networking opportunities
+        Join us for <strong>five days</strong><br/> of inspiration, education,<br/>and networking opportunities
       </h1>
       <strong class="text-2xl lg:text-3xl">October 16-20, 2023</strong>
 
@@ -117,7 +117,10 @@
   <div class="container px-4 mx-auto">
     <div class="grid gap-8 lg:grid-cols-2 lg:gap-16">
       <section>
-        <h2 class="mb-4 text-3xl font-bold font-heading lg:text-5xl">For Django fans of all levels</h2>
+        <h2 class="mb-4 text-3xl font-bold font-heading lg:text-5xl">For Django fans<br/> of all&nbsp;levels</h2>
+        <p class="text-xl lg:text-2xl">
+          DjangoCon US has something for everyone, from the person who develops Django applications for a living to the person who just tinkers in their spare time.
+        </p>
       </section>
       <div>
         <ul class="space-y-10">
@@ -182,11 +185,44 @@
 
 <div class="py-16">
   <div class="container px-4 mx-auto">
-    <div>
-      <h2>Latest News</h2>
+    <div class="grid gap-8 lg:grid-cols-2 lg:gap-16">
+      <figure>
+        
+        <img
+          class="media"
+          src="/assets/img/about.jpg"
+          loading="lazy"
+          alt="DjangoCon US attendees smiling for a picture.">
+      </figure>
+      <section>
+        <h2 class="mb-8 text-2xl font-bold font-heading lg:text-5xl">Latest News</h2>
+
+        <ol class="space-y-4 divide-y" reversed>
+              <li>
+                <article class="py-6">
+                  <time
+                    class="block mb-2 tracking-wide text-gray-600 uppercase"
+                    datetime="Sat Mar 09 2024 06:00:00 GMT+0000 (Coordinated Universal Time)">Mar 9, 2024</time>
+                  <h2 class="text-xl font-semibold font-heading lg:text-2xl"><a href="/news/announcing-call-for-proposals/" class="reverse-link">The Call for Proposals for DjangoCon US 2024 Is Now Open!</a></h2>
+                </article>
+              </li>
+            
+              <li>
+                <article class="py-6">
+                  <time
+                    class="block mb-2 tracking-wide text-gray-600 uppercase"
+                    datetime="Wed Jan 17 2024 05:00:00 GMT+0000 (Coordinated Universal Time)">Jan 17, 2024</time>
+                  <h2 class="text-xl font-semibold font-heading lg:text-2xl"><a href="/news/announcing-djangocon-us-2023/" class="reverse-link">Code, test, ship it! DjangoCon US 2024 has been announced!</a></h2>
+                </article>
+              </li>
+            </ol>
+
+
+      <a class="button" href="/news/">Read More News</a>
+      </section>
     </div>
 
-    <a class="button" href="/news/">Read More News</a>
+
   </div>
 </div>
 </main>
