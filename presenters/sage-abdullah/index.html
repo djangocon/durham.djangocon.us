@@ -40,38 +40,59 @@
 </head>
 
 <body class="view-presenter">
-  <header class="py-4">
-    <nav class="container px-4 mx-auto">
-      <ul class="flex flex-col gap-2 lg:flex-row lg:gap-8 lg:items-center lg:text-xl">
-        <li aria-hidden="true" class="lg:mr-auto">
+  <header id="SiteHeader" class="fixed top-0 w-full py-4 bg-white lg:py-6 lg:relative">
+    <div class="container px-4 mx-auto">
+      <nav class="flex flex-wrap">
+        <div class="flex items-center justify-between w-full lg:max-w-max">
           <a
             href="/"
             aria-label="Go to homepage">
-            <img src="/assets/img/logo.svg" alt="DjangoCon US" class="h-16">
+            <img src="/assets/img/logo.svg" alt="DjangoCon US" class="h-12 lg:h-20">
           </a>
-        </li>
-        <li class="lg:sr-only"><a href="/">Home</a></li>
-        <li><a href="/about">About</a></li>
-        <li><a href="/organizers">Organizers</a></li>
-        <li><a href="/venue">Venue</a></li>
-        <li><a href="/schedule">Schedule</a></li>
-        <li><a href="/sponsors">Sponsors</a></li>
-        <li><a href="/news">News</a></li>
-        <li><a href="#" class="button">Buy Tickets</a></li>
-      </ul>
-    </nav>
+          <button id="NavToggler" class="lg:hidden">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+            </svg>
+          </button>
+        </div>
+
+        <ul
+          id="NavMenu"
+          class="flex-col flex-1 hidden w-full gap-6 py-8 text-xl lg:flex-row lg:gap-8 lg:items-center lg:py-0 lg:flex lg:justify-end">
+          <li class="lg:sr-only"><a href="/">Home</a></li>
+          <li class="relative">
+            <a href="/about" data-menu-trigger>About</a>
+            <ul class="flex-col hidden gap-6 px-4 py-2 mt-2 border-l-4 border-bray-50 lg:absolute lg:top-full lg:border-4 lg:bg-white lg:left-1/2 lg:translate-x-[-50%] lg:w-[24ch] lg:p-4">
+              <li><a href="/about/" role="menuitem">About DjangoCon US</a></li>
+              <li><a href="/tickets/" role="menuitem">Tickets</a></li>
+              <li><a href="/faq/" role="menuitem">FAQ</a></li>
+              <li><a href="/conduct/" role="menuitem">Code of Conduct</a></li>
+              <li><a href="/covid/" role="menuitem">COVID-19 Policy</a></li>
+              <li><a href="/opportunity-grants/" role="menuitem">Opportunity Grants</a></li>
+              <li><a href="/visas/" role="menuitem">Visa Support</a></li>
+              <li><a href="/organizers/" role="menuitem">Organizers</a></li>
+            </ul>
+          </li>
+          <li><a href="/venue">Venue</a></li>
+          
+          <li><a href="/sponsors">Sponsors</a></li>
+          <li><a href="/news">News</a></li>
+          <li><a href="#" class="button">Buy Tickets</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
 
-  <div class="flex-1">
+  <main id="SiteMain" class="flex-1 pt-[80px] lg:pt-0 lg:block">
 <p>I'm Sage and I'm from Jakarta, Indonesia.</p>
 <p>In 2019, I participated in Google Summer of Code with Django, during which I implemented the <a href="https://docs.djangoproject.com/en/stable/ref/models/fields/#jsonfield">cross-database <code>JSONField</code></a> that became available in Django 3.1.</p>
 <p>Now, I'm based in the UK and I work at Torchbox, building new features and improvements to the Django-powered <a href="https://wagtail.org">Wagtail CMS</a> and its ecosystem.</p>
 <p>Outside of the Django world, I maintain my project <a href="https://giscus.app">giscus</a>, a comment system powered by GitHub Discussions.</p>
 <p>You can find me @laymonage on <a href="https://github.com/laymonage">GitHub</a>, <a href="https://twitter.com/laymonage">Twitter</a>, and other sites. I'd love to make friends from around the world, so hit me up!</p>
 
-</div>
+</main>
 
-  <footer class="bg-gray-200">
+  <footer id="SiteFooter" class="bg-gray-200 lg:block">
     <div class="container grid gap-8 px-4 py-8 mx-auto place-items-center">
       <ul class="flex flex-wrap gap-8">
         <li>
@@ -108,7 +129,7 @@
         </li>
       </ul>
 
-      <p class="text-center">
+      <p class="text-center lg:text-xl">
         <strong>
           Got questions? We can help:
           <a
@@ -117,8 +138,8 @@
       </p>
       <small class="text-sm text-center">
         &copy; 2024 DjangoCon US
-        · Design by <a href="http://yupgup.com/" class="link">YupGup</a>
-        · Presented by <a href="https://www.defna.org/" class="link">DEFNA</a>
+        · Design by <a href="http://yupgup.com/" class="link" target="_blank">YupGup</a>
+        · Presented by <a href="https://www.defna.org/" class="link" target="_blank">DEFNA</a>
         · <a href="/colophon/" class="link">Colophon</a>
       </small>
     </div>
@@ -139,5 +160,6 @@
     <path fill="currentColor" d="M32.2 0C14.5 0 0 14.5 0 32.2 0 50 14.5 64.5 32.2 64.5 50 64.5 64.5 50 64.5 32.2 64.5 14.5 50 0 32.2 0zM57.2 45.3C57.2 45.3 57.2 45.3 57.2 45.3l-6.7 0c1.1-3.6 1.7-7.4 1.9-11.1h8C60.1 38.1 59 41.9 57.2 45.3zM34.4 60.4V49.3H45c-2.1 4.9-4.5 8.5-5.9 10.4C37.6 60 36 60.2 34.4 60.4zM25.5 59.7c-1.4-1.8-3.8-5.4-5.9-10.4h10.8v11.1C28.8 60.3 27.1 60.1 25.5 59.7zM7.3 45.3c-1.8-3.4-2.9-7.2-3.2-11.1h8.1c0.2 3.8 0.8 7.5 1.9 11.1L7.3 45.3C7.3 45.3 7.3 45.3 7.3 45.3zM7.5 18.8C7.5 18.8 7.5 18.8 7.5 18.8l6.7 0c-1.2 3.7-1.8 7.6-2 11.5H4.1C4.4 26.3 5.5 22.4 7.5 18.8zM30.5 4.1v10.8H19.9c1.5-3.3 3.5-6.7 6.1-10.2C27.4 4.4 28.9 4.2 30.5 4.1zM38.7 4.7c2.6 3.5 4.5 6.9 6 10.2H34.4V4.1C35.8 4.3 37.3 4.4 38.7 4.7zM46.2 18.8c1.3 3.7 2 7.6 2.2 11.5h-14V18.8C34.4 18.8 46.2 18.8 46.2 18.8zM30.5 18.8v11.5H16.2c0.2-3.6 0.8-7.5 2.2-11.5H30.5zM16.2 34.2h14.3v11.1H18.2C17 41.7 16.4 38 16.2 34.2zM34.4 45.3V34.2h14c-0.2 3.8-0.9 7.5-2 11.1C46.4 45.3 34.4 45.3 34.4 45.3zM52.4 30.3c-0.1-3.9-0.8-7.7-2-11.5H57c0 0 0 0 0 0 1.9 3.5 3.1 7.5 3.3 11.5C60.4 30.3 52.4 30.3 52.4 30.3zM54.5 14.9h-5.5c-1.1-2.7-2.4-5.3-3.9-7.8C48.7 9 51.9 11.6 54.5 14.9zM19.7 7c-1.6 2.5-2.9 5.2-4 7.9H10C12.6 11.6 15.9 8.9 19.7 7zM9.7 49.3h5.6c1.1 2.8 2.4 5.4 3.9 8C15.5 55.3 12.3 52.6 9.7 49.3zM45.4 57.2c1.5-2.5 2.8-5.2 3.8-7.9h5.5C52.3 52.6 49.1 55.2 45.4 57.2z"/>
   </symbol>
 </svg>
+<script src="/assets/js/main.js"></script>
 </body>
 </html>
