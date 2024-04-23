@@ -41,7 +41,7 @@
 
 <body>
   <header id="SiteHeader" class="fixed top-0 w-full py-4 bg-white lg:py-6 lg:relative">
-    <div class="container px-4 mx-auto">
+    <div class="wrapper">
       <nav class="flex flex-wrap">
         <div class="flex items-center justify-between w-full lg:max-w-max">
           <a
@@ -50,51 +50,72 @@
             <img src="/assets/img/logo.svg" alt="DjangoCon US" class="h-12 lg:h-20">
           </a>
           <button id="NavToggler" class="lg:hidden">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8" aria-hidden="true">
               <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
             </svg>
+            <span class="sr-only">Toggle navigation</span>
           </button>
         </div>
 
         <ul
-          id="NavMenu"
-          class="flex-col flex-1 hidden w-full gap-6 py-8 text-xl lg:flex-row lg:gap-8 lg:items-center lg:py-0 lg:flex lg:justify-end">
-          <li class="lg:sr-only"><a href="/">Home</a></li>
-          <li class="relative">
-            <a href="/about" data-menu-trigger>About</a>
-            <ul class="flex-col hidden gap-6 px-4 py-2 mt-2 border-l-4 border-bray-50 lg:absolute lg:top-full lg:border-4 lg:bg-white lg:left-1/2 lg:translate-x-[-50%] lg:w-[24ch] lg:p-4">
-              <li><a href="/about/" role="menuitem">About DjangoCon US</a></li>
-              <li><a href="/tickets/" role="menuitem">Tickets</a></li>
-              <li><a href="/faq/" role="menuitem">FAQ</a></li>
-              <li><a href="/conduct/" role="menuitem">Code of Conduct</a></li>
-              <li><a href="/covid/" role="menuitem">COVID-19 Policy</a></li>
-              <li><a href="/opportunity-grants/" role="menuitem">Opportunity Grants</a></li>
-              <li><a href="/visas/" role="menuitem">Visa Support</a></li>
-              <li><a href="/organizers/" role="menuitem">Organizers</a></li>
-            </ul>
-          </li>
-          <li><a href="/venue">Venue</a></li>
-          
-          <li><a href="/sponsors">Sponsors</a></li>
-          <li><a href="/news">News</a></li>
-          <li><a href="#" class="button">Buy Tickets</a></li>
-        </ul>
+    id="NavMenu"
+    class="flex-col flex-1 hidden w-full gap-6 py-8 text-xl font-semibold lg:flex-row lg:gap-8 lg:items-center lg:py-0 lg:flex lg:justify-end">
+    <li class="lg:sr-only"><a href="/">Home</a></li>
+    <li class="relative">
+      <a href="/about" data-menu-trigger>About</a>
+      <ul
+        data-menu-list
+        class="flex-col hidden gap-6 px-4 py-2 mt-2 border-l-4 border-bray-50 lg:absolute lg:top-full lg:border-4 lg:bg-white lg:left-1/2 lg:translate-x-[-50%] lg:w-[24ch] lg:p-6 rounded font-medium">
+        <li><a href="/about/" role="menuitem">About DjangoCon US</a></li>
+        <li><a href="/about/tickets/" role="menuitem">Tickets</a></li>
+        <li><a href="/about/faq/" role="menuitem">FAQ</a></li>
+        <li><a href="/about/conduct/" role="menuitem">Code of Conduct</a></li>
+        <li><a href="/about/covid/" role="menuitem">COVID-19 Policy</a></li>
+        <li><a href="/about/opportunity-grants/" role="menuitem">Opportunity Grants</a></li>
+        <li><a href="/about/visas/" role="menuitem">Visa Support</a></li>
+        <li><a href="/about/organizers/" role="menuitem">Organizers</a></li>
+      </ul>
+    </li>
+    
+    <li><a href="/venue/">Venue</a></li>
+    <li class="relative">
+      <a href="/speaking/" data-menu-trigger>Speaking</a>
+      <ul
+        data-menu-list
+        class="flex-col hidden gap-6 px-4 py-2 mt-2 border-l-4 border-bray-50 lg:absolute lg:top-full lg:border-4 lg:bg-white lg:left-1/2 lg:translate-x-[-50%] lg:w-[26ch] lg:p-6 rounded font-medium">
+        <li><a href="/speaking/">Speaking at DjangoCon US</a></li>
+        <li><a href="/speaking/speaker-resources/">Speaker Resources</a></li>
+      </ul>
+    </li>
+    <li class="relative">
+      <a href="/sponsors/" data-menu-trigger>Sponsors</a>
+      <ul
+        data-menu-list
+        class="flex-col hidden gap-6 px-4 py-2 mt-2 border-l-4 border-bray-50 lg:absolute lg:top-full lg:border-4 lg:bg-white lg:left-1/2 lg:translate-x-[-50%] lg:w-[24ch] lg:p-6 rounded font-medium">
+        <li><a href="/sponsors/">Our Sponsors</a></li>
+        <li><a href="/sponsors/information/">Sponsorship Prospectus</a></li>
+      </ul>
+    </li>
+    <li><a href="/news/">News</a></li>
+    <li><a href="https://ti.to/defna/djangocon-us-2024" class="button">Buy Tickets</a></li>
+  </ul>
+
       </nav>
     </div>
   </header>
 
   <main id="SiteMain" class="flex-1 pt-[80px] lg:pt-0 lg:block">
 <div class="pt-12 pb-16">
-  <div class="container px-4 mx-auto">
+  <div class="wrapper">
     <header>
-      <h1 class="mb-8 text-4xl font-bold lg:text-6xl">About DjangoCon US</h1>
+      <h1 class="mb-8 pageheading">About DjangoCon US</h1>
 
-      <div class="max-w-[65rem]">
+      <div class="max-w-[60rem]">
         <h2 class="mb-8 text-2xl font-medium font-heading lg:text-4xl">
           DjangoCon US is a five-day international conference for the community by the community about the Django web framework, held each year in North America.
         </h2>
 
-        <p class="text-xl lg:text-2xl">
+        <p class="lead">
           DjangoCon US has something for everyone, from the person who develops Django applications for a living to the person who just tinkers in their spare time. You'll discover details about a range of diverse applications that people from all over the world are building with Django, get a deeper understanding of concepts you’re already familiar with and discover new ways to use them, and have a lot of fun!
         </p>
       </div>
@@ -102,9 +123,9 @@
   </div>
 </div>
 
-<div class="py-16 bg-gray-50">
-  <div class="container px-4 mx-auto">
-    <div class="grid gap-8 lg:grid-cols-2 lg:gap-16">
+<div class="bg-gray-100 block-container">
+  <div class="wrapper">
+    <div class="grid-1-2">
       <section>
         <h2 class="mb-8 text-2xl font-bold font-heading lg:text-4xl">Pre-Conference</h2>
 
@@ -112,8 +133,8 @@
           <li>
             <div class="flex flex-wrap items-center gap-4">
   <time class="flex flex-col min-w-28">
-    <span class="px-3 py-1 font-semibold text-center text-white bg-gray-900 rounded-t-md">May</span>
-    <span class="px-3 py-1 text-3xl text-center bg-white border-2 border-gray-100 rounded-b-md">15</span>
+    <span class="px-3 py-1 text-lg font-semibold text-center text-white bg-brick-red rounded-t-md">May</span>
+    <span class="px-3 py-2 text-3xl text-center bg-white border-2 border-t-0 border-gray-300 rounded-b-md">15</span>
   </time>
   <h3 class="flex-1 text-xl font-semibold lg:text-2xl">Calls for Proposals Closes</h3>
 </div>
@@ -123,8 +144,8 @@
           <li>
             <div class="flex flex-wrap items-center gap-4">
   <time class="flex flex-col min-w-28">
-    <span class="px-3 py-1 font-semibold text-center text-white bg-gray-900 rounded-t-md">May</span>
-    <span class="px-3 py-1 text-3xl text-center bg-white border-2 border-gray-100 rounded-b-md">15</span>
+    <span class="px-3 py-1 text-lg font-semibold text-center text-white bg-brick-red rounded-t-md">May</span>
+    <span class="px-3 py-2 text-3xl text-center bg-white border-2 border-t-0 border-gray-300 rounded-b-md">15</span>
   </time>
   <h3 class="flex-1 text-xl font-semibold lg:text-2xl">Opportunity Grant Application Closes</h3>
 </div>
@@ -134,8 +155,8 @@
           <li>
             <div class="flex flex-wrap items-center gap-4">
   <time class="flex flex-col min-w-28">
-    <span class="px-3 py-1 font-semibold text-center text-white bg-gray-900 rounded-t-md">June</span>
-    <span class="px-3 py-1 text-3xl text-center bg-white border-2 border-gray-100 rounded-b-md">28</span>
+    <span class="px-3 py-1 text-lg font-semibold text-center text-white bg-brick-red rounded-t-md">June</span>
+    <span class="px-3 py-2 text-3xl text-center bg-white border-2 border-t-0 border-gray-300 rounded-b-md">28</span>
   </time>
   <h3 class="flex-1 text-xl font-semibold lg:text-2xl">Opportunity Grant and Proposal Notifications</h3>
 </div>
@@ -144,7 +165,7 @@
         </ul>
 
         <div class="flex flex-wrap gap-4 mt-8">
-          <a class="button" href="https://pretalx.com/djangocon-us-2023/cfp">Submit a Talk</a>
+          <a class="button" href="https://pretalx.com/djangocon-us-2024/cfp">Submit a Talk</a>
           <a class="button" href="https://forms.gle/LamfHzoXULdv63h18">Apply for an Opportunity Grant</a>
         </div>
       </section>
@@ -156,8 +177,8 @@
           <li>
             <div class="flex flex-wrap items-center gap-4">
   <time class="flex flex-col min-w-28">
-    <span class="px-3 py-1 font-semibold text-center text-white bg-gray-900 rounded-t-md">Oct</span>
-    <span class="px-3 py-1 text-3xl text-center bg-white border-2 border-gray-100 rounded-b-md">16-18</span>
+    <span class="px-3 py-1 text-lg font-semibold text-center text-white bg-brick-red rounded-t-md">Oct</span>
+    <span class="px-3 py-2 text-3xl text-center bg-white border-2 border-t-0 border-gray-300 rounded-b-md">16-18</span>
   </time>
   <h3 class="flex-1 text-xl font-semibold lg:text-2xl">Talks: Dozens of talks chosen by the community</h3>
 </div>
@@ -166,8 +187,8 @@
           <li>
             <div class="flex flex-wrap items-center gap-4">
   <time class="flex flex-col min-w-28">
-    <span class="px-3 py-1 font-semibold text-center text-white bg-gray-900 rounded-t-md">Oct</span>
-    <span class="px-3 py-1 text-3xl text-center bg-white border-2 border-gray-100 rounded-b-md">19-20</span>
+    <span class="px-3 py-1 text-lg font-semibold text-center text-white bg-brick-red rounded-t-md">Oct</span>
+    <span class="px-3 py-2 text-3xl text-center bg-white border-2 border-t-0 border-gray-300 rounded-b-md">19-20</span>
   </time>
   <h3 class="flex-1 text-xl font-semibold lg:text-2xl">Sprints: Team up to work on Django!</h3>
 </div>
@@ -184,8 +205,8 @@
 </div>
 
 
-<div class="py-16">
-  <div class="container px-4 mx-auto">
+<div class="block-container">
+  <div class="wrapper">
     <h2 class="mb-8 text-2xl font-bold font-heading lg:text-5xl">Conference Features</h2>
 
     <div class="grid gap-8 lg:grid-cols-3 lg:gap-16">
@@ -207,14 +228,14 @@
   </div>
 </div>
 
-<div class="py-16">
-  <div class="container px-4 mx-auto">
-    <div class="grid gap-8 lg:grid-cols-2 lg:gap-16">
+<div class="block-container">
+  <div class="wrapper">
+    <div class="grid-1-2">
       <figure>
         
         <img
           class="media"
-          src="/assets/img/about.jpg"
+          src="/assets/img/crowd-1.jpg"
           loading="lazy"
           alt="DjangoCon US attendees smiling for a picture.">
       </figure>
@@ -222,7 +243,7 @@
       <section>
         <h2 class="mb-8 text-2xl font-bold font-heading lg:text-5xl">Day 1 Orientation</h2>
 
-        <div class="space-y-6 text-xl lg:text-2xl">
+        <div class="space-y-6 lg:text-xl">
           <ul class="space-y-4">
             <li>Are you new to DjangoCon US or tech conferences in general?</li>
             <li>Are you worried you might feel out of place?</li>
@@ -242,7 +263,7 @@
 
 </main>
 
-  <footer id="SiteFooter" class="py-12 bg-gray-200 lg:block">
+  <footer id="SiteFooter" class="py-12 text-white bg-black">
     <div class="container mx-auto ">
       <div class="grid gap-8 px-4 place-items-center">
         <ul class="flex flex-wrap gap-8">
