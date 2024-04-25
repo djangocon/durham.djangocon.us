@@ -105,35 +105,38 @@
   </header>
 
   <main id="SiteMain" class="flex-1 pt-[80px] lg:pt-0 lg:block">
-<div class="pt-8 pb-0 bg-no-repeat bg-cover border-b-4 border-black lg:pt-0" style="background-image: url(/assets/img/hero-bg.svg)">
+<div class="pt-8 pb-0 bg-repeat border-b-4 border-black" style="background-image: url(/assets/img/hero-bg.svg)">
   <div class="wrapper">
-    <div class="grid-1-2">
-      <section class="self-center pb-8">
-        <h1 class="mb-6 pageheading">
-          Join us for <strong>five days</strong><br/> of inspiration, education,<br/>and networking opportunities
+    <div class="flex flex-col gap-8 lg:flex-row">
+      <section class="self-center w-full lg:flex-1">
+        <h1 class="mb-4 text-4xl font-extrabold leading-tight lg:text-5xl">
+          Join us for <strong>five days</strong><br/> of inspiration, education,<br/>and networking
         </h1>
 
         <p class="mb-4 text-2xl lg:text-3xl">
-          <strong>October 16-20, 2023</strong>
+          <strong>September 22-27, 2024</strong>
         </p>
 
         <p class="mb-6 text-2xl lg:text-3xl">
           <a
             href="https://www.marriott.com/events/start.mi?id=1674740649947&key=GRP"
-            target="_blank"
-            class="link">Durham Convention Center</a> in Durham, NC
+            target="_blank">Durham Convention Center<br/><strong>Durham, NC</strong></a>
         </p>
 
-        <div class="mt-8 button-group">
+        <div class="button-group">
           <a class="button" href="https://ti.to/defna/djangocon-us-2024">Buy Tickets</a>
-          
+          <a class="button" href="https://pretalx.com/djangocon-us-2024/cfp">Submit Talk</a>
 
           
-          <a class="button" href="/schedule/">Conference Schedule</a>
         </div>
       </section>
 
-      <img src="/assets/img/hero-img.png" alt="" class="self-end"/>
+      <div class="self-end lg:max-w-2xl">
+        <img
+          src="/assets/img/hero-img.webp"
+          alt="A collage of Durham, NC centric stickers and photos."
+        />
+      </div>
     </div>
   </div>
 </div>
@@ -153,8 +156,8 @@
           <li>
             <div class="flex flex-wrap items-center gap-4">
   <time class="flex flex-col min-w-28">
-    <span class="px-3 py-1 text-lg font-semibold text-center text-white bg-brick-red rounded-t-md">Oct</span>
-    <span class="px-3 py-2 text-3xl text-center bg-white border-2 border-t-0 border-gray-300 rounded-b-md">8</span>
+    <span class="px-3 py-1 text-lg font-semibold text-center text-white bg-brick-red rounded-t-md">Sep</span>
+    <span class="px-3 py-2 text-3xl text-center bg-white border-2 border-t-0 border-gray-300 rounded-b-md">22</span>
   </time>
   <h3 class="flex-1 text-xl font-semibold lg:text-2xl">Tutorials: One day, numerous sessions</h3>
 </div>
@@ -163,8 +166,8 @@
           <li>
             <div class="flex flex-wrap items-center gap-4">
   <time class="flex flex-col min-w-28">
-    <span class="px-3 py-1 text-lg font-semibold text-center text-white bg-brick-red rounded-t-md">Oct</span>
-    <span class="px-3 py-2 text-3xl text-center bg-white border-2 border-t-0 border-gray-300 rounded-b-md">16-18</span>
+    <span class="px-3 py-1 text-lg font-semibold text-center text-white bg-brick-red rounded-t-md">Sep</span>
+    <span class="px-3 py-2 text-3xl text-center bg-white border-2 border-t-0 border-gray-300 rounded-b-md">23-25</span>
   </time>
   <h3 class="flex-1 text-xl font-semibold lg:text-2xl">Talks: Dozens of talks chosen by the community</h3>
 </div>
@@ -173,8 +176,8 @@
           <li>
             <div class="flex flex-wrap items-center gap-4">
   <time class="flex flex-col min-w-28">
-    <span class="px-3 py-1 text-lg font-semibold text-center text-white bg-brick-red rounded-t-md">Oct</span>
-    <span class="px-3 py-2 text-3xl text-center bg-white border-2 border-t-0 border-gray-300 rounded-b-md">19-20</span>
+    <span class="px-3 py-1 text-lg font-semibold text-center text-white bg-brick-red rounded-t-md">Sep</span>
+    <span class="px-3 py-2 text-3xl text-center bg-white border-2 border-t-0 border-gray-300 rounded-b-md">26-27</span>
   </time>
   <h3 class="flex-1 text-xl font-semibold lg:text-2xl">Sprints: Team up to work on Django!</h3>
 </div>
@@ -192,19 +195,19 @@
 
     <div class="grid gap-8 lg:grid-cols-3 lg:gap-16">
       <section class="flex flex-col gap-4 p-6 bg-white border-2">
-        <img src="/assets/img/icons/People.svg" alt="Two people. One person is standing slightly in front of the other." class="w-14 h-14 icon" />
+        <img src="/assets/img/icons/People.svg" alt="Two people. One person is standing slightly in front of the other." class="w-16 h-16 icon" />
         <h3 class="text-lg font-bold lg:text-2xl font-heading">Code of Conduct</h3>
         <p class="lg:text-lg">Participants are expected to be respectful to each other. For details on our expectations, and who to contact if you need assistance, see our <strong><a href="/conduct/" class="link">Code of Conduct</a></strong>.</p>
       </section>
 
       <section class="flex flex-col gap-4 p-6 bg-white border-2">
-        <img src="/assets/img/icons/Document.svg" alt="An official document with words written on it." class="w-14 h-14 icon" />
+        <img src="/assets/img/icons/Document.svg" alt="An official document with words written on it." class="w-16 h-16 icon" />
         <h3 class="text-lg font-bold lg:text-2xl font-heading">COVID-19</h3>
         <p class="lg:text-lg">Read our <strong><a href="/covid" class="link">COVID-19 Policy</a></strong>, including mask and testing requirements.</p>
       </section>
 
       <section class="flex flex-col gap-4 p-6 bg-white border-2">
-        <img src="/assets/img/icons/Heart.svg" alt="A heart." class="w-14 h-14 icon" />
+        <img src="/assets/img/icons/Heart.svg" alt="A heart." class="w-16 h-16 icon" />
         <h3 class="text-lg font-bold lg:text-2xl font-heading">Accessiblity</h3>
         <p class="lg:text-lg">We offer a range of accommodations, including live captioning, thoughtful lunch options, and a dedicated accessibility team to ensure everyone can fully participate.</p>
       </section>
@@ -231,6 +234,15 @@
                 <article class="py-6">
                   <time
                     class="mb-2 tracking-wide text-gray-600 uppercase block-container"
+                    datetime="Thu Apr 04 2024 12:00:00 GMT+0000 (Coordinated Universal Time)">Apr 4, 2024</time>
+                  <h2 class="text-xl font-semibold font-heading lg:text-2xl"><a href="/news/benefits-of-speaking-djangocon/" class="reverse-link">What are the Benefits of Speaking at DjangoCon US?</a></h2>
+                </article>
+              </li>
+            
+              <li>
+                <article class="py-6">
+                  <time
+                    class="mb-2 tracking-wide text-gray-600 uppercase block-container"
                     datetime="Sat Mar 09 2024 06:00:00 GMT+0000 (Coordinated Universal Time)">Mar 9, 2024</time>
                   <h2 class="text-xl font-semibold font-heading lg:text-2xl"><a href="/news/announcing-call-for-proposals/" class="reverse-link">The Call for Proposals for DjangoCon US 2024 Is Now Open!</a></h2>
                 </article>
@@ -241,7 +253,7 @@
                   <time
                     class="mb-2 tracking-wide text-gray-600 uppercase block-container"
                     datetime="Wed Jan 17 2024 05:00:00 GMT+0000 (Coordinated Universal Time)">Jan 17, 2024</time>
-                  <h2 class="text-xl font-semibold font-heading lg:text-2xl"><a href="/news/announcing-djangocon-us-2023/" class="reverse-link">Code, test, ship it! DjangoCon US 2024 has been announced!</a></h2>
+                  <h2 class="text-xl font-semibold font-heading lg:text-2xl"><a href="/news/announcing-djangocon-us-2024/" class="reverse-link">Code, test, ship it! DjangoCon US 2024 has been announced!</a></h2>
                 </article>
               </li>
             </ol>
@@ -256,13 +268,13 @@
 </div>
 </main>
 
-  <footer id="SiteFooter" class="py-12 text-white bg-black">
+  <footer id="SiteFooter" class="py-20 text-white bg-black">
     <div class="container mx-auto ">
       <div class="grid gap-8 px-4 place-items-center">
         <ul class="flex flex-wrap gap-8">
           <li>
             <a class="mastodon" href="https://fosstodon.org/@djangocon">
-              <svg class="icon">
+              <svg class="w-8 h-8 icon">
                 <title>Mastodon</title>
                 <use xlink:href="#mastodon-icon"></use>
               </svg>
@@ -270,7 +282,7 @@
           </li>
           <li>
             <a class="twitter" href="https://twitter.com/djangocon">
-              <svg class="icon">
+              <svg class="w-8 h-8 icon">
                 <title>Twitter</title>
                 <use xlink:href="#twitter-icon"></use>
               </svg>
@@ -278,7 +290,7 @@
           </li>
           <li>
             <a class="github" href="https://github.com/djangocon/">
-              <svg class="icon">
+              <svg class="w-8 h-8 icon">
                 <title>Github</title>
                 <use xlink:href="#github-icon"></use>
               </svg>
@@ -286,7 +298,7 @@
           </li>
           <li>
             <a class="facebook" href="https://www.facebook.com/djangoconus/">
-              <svg class="icon">
+              <svg class="w-8 h-8 icon">
                 <title>Facebook</title>
                 <use xlink:href="#facebook-icon"></use>
               </svg>
