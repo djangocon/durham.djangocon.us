@@ -1,8 +1,7 @@
 ---
-hidden: true
 level: Platinum
 name: REVSYS
-date: 2022-06-21
+date: 2024-05-06
 logo:
     filename: revsys.png
     orientation: portrait

@@ -1,62 +1,22 @@
 const path = require('path');
 
 const Image = require('@11ty/eleventy-img');
-const markdownIt = require("markdown-it");
+
+const setupCollections = require('./lib/collections');
+const setupSessions = require('./lib/sessions');
+const setupFeed = require('./lib/feed');
+const markdown = require('./lib/markdown');
+
+const { formatInTimeZone } = require('date-fns-tz');
+
+// Read timezone from site.json
+const siteConfig = require('./src/_data/site.json');
+const timezone = siteConfig.timezone || 'UTC'; // Default to 'UTC' if not specified
 
 module.exports = (config) => {
-  /*
-    Setup collections
-    https://www.11ty.dev/docs/collections/
-  */
-  config.addCollection("posts", function(collectionApi) {
-    return collectionApi.getFilteredByGlob("src/_content/posts/*.md");
-  });
-
-  config.addCollection("places", function(collectionApi) {
-    return collectionApi.getFilteredByGlob("src/_content/places/*.md");
-  });
-
-  config.addCollection("presenters", function(collectionApi) {
-    return collectionApi.getFilteredByGlob("src/_content/presenters/*.md");
-  });
-
-  config.addCollection("organizers", function(collectionApi) {
-    return collectionApi.getFilteredByGlob("src/_content/organizers/*.md").filter(item => !item.data.hidden);
-  });
-
-  config.addCollection("sponsorsByLevel", function(collectionApi) {
-    const sponsors = collectionApi.getFilteredByGlob("src/_content/sponsors/*.md");
-    const visibleSponsors = sponsors.filter(sponsor => !sponsor.data.hidden);
-    const levelOrder = [
-      "Diamond",
-      "Platnum",
-      "Gold",
-      "Silver",
-      "Bronze",
-      "Coffee",
-      "Opportunity Grant",
-      "Community",
-    ];
-
-    const sponsorsByLevel = visibleSponsors.reduce((acc, sponsor) => {
-      const level = sponsor.data.level;
-      if (!acc[level]) {
-        acc[level] = [];
-      }
-      acc[level].push(sponsor);
-      return acc;
-    }, {});
-
-    // Sort levels based on predefined order
-    const sortedSponsorsByLevel = {};
-    levelOrder.forEach(level => {
-      if (sponsorsByLevel[level]) {
-        sortedSponsorsByLevel[level] = sponsorsByLevel[level];
-      }
-    });
-
-    return sortedSponsorsByLevel;
-  });
+  setupCollections(config);
+  setupSessions(config);
+  setupFeed(config);
 
   /*
     Setup passthrough file copy
@@ -66,10 +26,12 @@ module.exports = (config) => {
   config.addPassthroughCopy("src/assets/js/");
   config.addPassthroughCopy("src/assets/favicons/");
   config.addPassthroughCopy({
-    "src/_content/sponsors/*.{png,jpg,jpeg,svg}": "sponsors/",
-    "src/_content/places/*.{png,jpg,jpeg,webp}": "venue/",
+    "src/_content/sponsors/*.{png,jpg,jpeg,webp,svg}": "sponsors/",
+    "src/_content/places/*.{png,jpg,jpeg,webp,svg}": "venue/",
   });
   config.addPassthroughCopy("CNAME");
+  config.addPassthroughCopy("ROBOTS.txt");
+
 
   /*
     Setup watch targets
@@ -80,18 +42,16 @@ module.exports = (config) => {
   /*
     Shortcodes
   */
-  config.addLiquidShortcode("year", () => `${new Date().getFullYear()}`);
-
   // TODO: Accept widths or support different widths
   config.addLiquidShortcode("image", async function(
     src,
     outputDir,
     urlPath,
-    alt,
+    alt = "",
     sizes,
     classes = "") {
       let metadata = await Image(src, {
-        widths: [300, 600],
+        widths: [180, 300, 600],
         formats: ["webp"],
         outputDir,
         urlPath,
@@ -114,17 +74,28 @@ module.exports = (config) => {
     return Image.generateHTML(metadata, imageAttributes);
   });
 
+  config.addPairedShortcode("markdown", function(content = "") {
+    return markdown.render(content);
+  });
+
   /*
     Filters
   */
   config.addFilter("markdown", function(content = "") {
-    let markdown = markdownIt({
-      html: true,
-      breaks: true,
-      linkify: true
-    });
-
     return markdown.render(content);
+  });
+
+  config.addFilter("formatDateTime", function(date, format) {
+    return formatInTimeZone(date, timezone, format);
+  });
+
+  config.addFilter("find", function find(collection = [], slug = "") {
+    return collection.find(item => item.fileSlug === slug);
+  });
+
+  /* TODO: Make generic */
+  config.addFilter("talksByPresenter", function talksByPresenter(collection = [], slug = "") {
+    return collection.filter(item => item.data.presenter_slugs.includes(slug));
   });
 
   /*
@@ -135,6 +106,8 @@ module.exports = (config) => {
     excerpt_separator: "<!-- excerpt -->"
   });
 
+  config.setLibrary("md", markdown);
+
   return {
     dir: {
       input: "src",
@@ -144,7 +117,6 @@ module.exports = (config) => {
 
     // Use Liquid for templating
     // https://www.11ty.dev/docs/languages/liquid/
-    htmlTemplateEngine: "liquid",
-    markdownTemplateEngine: "liquid"
+    htmlTemplateEngine: "liquid"
   }
 };

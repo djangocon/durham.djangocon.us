@@ -1,4 +1,3 @@
 {
-  "permalink": "/presenter/{{ page.fileSlug }}",
-  "layout": "presenter"
+  "sitemap": false
 }

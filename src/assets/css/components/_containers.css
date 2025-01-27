@@ -1,9 +1,13 @@
 .block-container {
-  @apply py-14;
+  @apply py-12;
 }
 
 .wrapper {
   @apply container px-4 mx-auto;
+}
+
+.wrapper.narrow {
+  @apply max-w-screen-lg;
 }
 
 .hero {
@@ -16,7 +20,7 @@
 
 @screen lg {
   .block-container {
-    @apply py-16;
+    @apply py-14;
   }
 
   .hero {

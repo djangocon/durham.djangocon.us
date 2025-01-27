@@ -1,22 +1,20 @@
 ---
-company: 20tab
+company: Python Italia
 hidden: false
 name: Paolo Melchiorre
 permalink: /presenters/paolo-melchiorre/
-photo: paolo-melchiorre.jpg
-pronouns: he/him
-slug: paolo-melchiorre
+photo: paolo-melchiorre.jpeg
 social:
-    twitter: pauloxnet
-    website: https://www.paulox.net
-    mastodon: https://fosstodon.org/@paulox
+    bluesky: null
     github: pauloxnet
+    instagram: null
+    mastodon: https://fosstodon.org/@paulox
+    twitter: pauloxnet
+    website: https://www.paulox.net/
 ---
 
-I’m Paolo Melchiorre, a longtime Python backend developer who contributes to the Django project and gives talks at tech conferences.
+I’m a longtime Python backend developer who contributes to the Django project and gives talks at tech conferences.
 
-I’ve been a GNU/Linux user for over 20 years and use and promote Free Software.
+I’ve been a GNU/Linux user for over 20 years, and I use and promote Free Software.
 
-I graduated in Software Engineering and I’m an alumnus of the University of Bologna, Italy.
-
-I’ve been working in the web for 15 years and now I’m the CTO of 20tab, a Pythonic software company, for which I work remotely.
+I graduated in Software Engineering, and I’m an alumnus of the University of Bologna, Italy.
