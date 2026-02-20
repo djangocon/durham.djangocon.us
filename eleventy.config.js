@@ -15,7 +15,7 @@ const timezone = siteConfig.timezone || 'UTC'; // Default to 'UTC' if not specif
 
 module.exports = (config) => {
   setupCollections(config);
-  setupSessions(config);
+  setupSessions(config, timezone);
   setupFeed(config);
 
   /*
@@ -24,6 +24,7 @@ module.exports = (config) => {
   */
   config.addPassthroughCopy("src/assets/img/**/*");
   config.addPassthroughCopy("src/assets/js/");
+  config.addPassthroughCopy("src/assets/gpx/*");
   config.addPassthroughCopy("src/assets/favicons/");
   config.addPassthroughCopy({
     "src/_content/sponsors/*.{png,jpg,jpeg,webp,svg}": "sponsors/",
@@ -96,6 +97,21 @@ module.exports = (config) => {
   /* TODO: Make generic */
   config.addFilter("talksByPresenter", function talksByPresenter(collection = [], slug = "") {
     return collection.filter(item => item.data.presenter_slugs.includes(slug));
+  });
+
+  // Only build pages that aren't marked as drafts in production
+  // In development mode, draft pages are built for preview purposes
+  // Usage: draft: true
+  config.addGlobalData("eleventyComputed.permalink", function() {
+    return (data) => {
+      // In production, exclude draft pages
+      if (data.draft && process.env.NODE_ENV === 'production') {
+        return false;
+      }
+
+      // Otherwise, use the permalink specified in the page front matter
+      return data.permalink;
+    }
   });
 
   /*

@@ -3,6 +3,7 @@
   "timezone": "America/New_York",
   "conf_year": 2024,
   "phase": "archived",
+  "banner": false,
   "conduct_email": "conduct@djangocon.us",
   "contact_us_email": "hello@djangocon.us",
   "opportunity_grants_email": "grants@djangocon.us",
@@ -27,6 +28,7 @@
     "mastodon": "https://fosstodon.org/@djangocon",
     "twitter": "https://x.com/djangocon",
     "x": "https://x.com/djangocon",
+    "bluesky": "https://bsky.app/profile/djangocon.us",
     "facebook": "https://www.facebook.com/djangoconus/",
     "instagram": "https://www.instagram.com/djangocon/"
   },

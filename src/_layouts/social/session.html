@@ -10,6 +10,13 @@ layout: social/default-social.html
   {% assign template_bg = "social-card-2.svg" %}
 {% endif %}
 
+{% assign title_length = talk.data.title | size %}
+{% if title_length > 100 %}
+  {% assign size_class = "long" %}
+{% else %}
+  {% assign size_class = "short" %}
+{% endif %}
+
 <div class="session-social-template session-social-presenter-count-{{ presenter_count }}">
   <img
     src="/assets/img/theme/social-cards/{{ template_bg }}"
@@ -21,18 +28,25 @@ layout: social/default-social.html
     {% if presenter.data.photo != null and presenter.data.photo != "" %}
       {% assign speaker_photo = 'src/_content/presenters/' | append: presenter.data.photo %}
       {% image speaker_photo, './dist/presenters/', '/presenters/', name, '(max-width: 1200px) 800px, 800px', 'session-social-template-photo' %}
+    {% else %}
+      <img
+        src="/assets/img/theme/empty-avatar.svg"
+        alt="{{ presenter.data.name }}'s photo"
+        class="session-social-template-photo">
     {% endif %}
   {% endfor %}
 
   <div class="session-social-template-content">
     <h1 class="session-social-template-name">
-      {% for presenter_slug in talk.data.presenter_slugs %}
-        {% assign presenter = collections.presenters | find:presenter_slug %}
-        {{ presenter.data.name }} {% if not forloop.last %}<span class="text-blue">&amp;</span>{% endif %}
-      {% endfor %}
+      <span>
+        {% for presenter_slug in talk.data.presenter_slugs %}
+          {% assign presenter = collections.presenters | find:presenter_slug %}
+          {{ presenter.data.name }} {% if not forloop.last %}<span class="text-blue">&amp;</span>{% endif %}
+        {% endfor %}
+      </span>
     </h1>
 
-    <p class="session-social-template-talks">
+    <p class="session-social-template-talks talk-{{ size_class}}">
       {{ talk.data.title }}
     </p>
   </div>

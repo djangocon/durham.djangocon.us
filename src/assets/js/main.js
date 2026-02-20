@@ -1,65 +1,47 @@
 /*
   Mobile site navigation
 */
-const navToggler = document.getElementById('NavToggler');
-const siteNav = document.querySelector('.site-nav');
-const allMenus = siteNav.querySelectorAll('[data-menu-list]');
+const siteNav = document.getElementById('SiteNav');
 
-navToggler.addEventListener('click', () => {
-  const siteMain = document.getElementById('SiteMain');
-  const siteFooter = document.getElementById('SiteFooter');
+if (siteNav) {
+  const navToggler = document.getElementById('NavToggler');
+  const siteBody = document.getElementById('SiteBody');
+  const siteHeader = document.getElementById('SiteHeader');
+  const allMenus = siteNav.querySelectorAll('[data-menu-list]');
+  const navMenuTriggers = document.querySelectorAll('[data-menu-trigger]');
 
-  if (siteNav.classList.contains('hidden')) {
-    siteNav.classList.replace('hidden', 'flex');
-  } else {
-    siteNav.classList.replace('flex', 'hidden');
-  }
+  const closeAllMenus = () => {
+    allMenus.forEach(menu => menu.classList.replace('flex', 'hidden'));
+    navMenuTriggers.forEach(trigger => trigger.setAttribute('aria-expanded', 'false'));
+  };
 
-  /*
-    Hide the main content and footer when the mobile menu is open.
-    This allows the menu to be scrollable and limits the DOM for screen readrs.
-  */
-  siteMain.classList.toggle('hidden');
-  siteFooter.classList.toggle('hidden');
-});
-
-const navMenuTriggers = document.querySelectorAll('[data-menu-trigger]');
-
-navMenuTriggers.forEach(trigger => {
-  trigger.addEventListener('click', (evt) => {
-    evt.preventDefault();
-    const target = trigger.nextElementSibling;
-
-    navMenuTriggers.forEach((trigger) => {
-      trigger.setAttribute('aria-expanded', 'false');
+  navToggler.addEventListener('click', () => {
+    const isOpen = siteNav.classList.contains('is-open');
+    [siteNav, siteHeader, navToggler].forEach(el => {
+      el.classList.toggle('is-open', !isOpen);
+      el.classList.toggle('is-closed', isOpen);
     });
+    siteBody.classList.toggle('mobile-nav-open');
+  });
 
-    allMenus.forEach((menu) => {
-      if (menu !== target) {
-        menu.classList.replace('flex', 'hidden');
+  navMenuTriggers.forEach(trigger => {
+    trigger.addEventListener('click', (evt) => {
+      evt.preventDefault();
+      const target = trigger.nextElementSibling;
+      const willOpen = target.classList.contains('hidden');
+
+      closeAllMenus();
+
+      if (willOpen) {
+        target.classList.replace('hidden', 'flex');
+        trigger.setAttribute('aria-expanded', 'true');
       }
     });
+  });
 
-    if (target.classList.contains('hidden')) {
-      target.classList.replace('hidden', 'flex');
-      trigger.setAttribute('aria-expanded', 'true');
-    } else {
-      target.classList.replace('flex', 'hidden');
-      trigger.setAttribute('aria-expanded', 'false');
+  document.addEventListener('click', (evt) => {
+    if (!siteNav.contains(evt.target) && evt.target !== navToggler) {
+      closeAllMenus();
     }
   });
-});
-
-// Close all menus when the user clicks outside
-document.addEventListener('click', function (evt) {
-  if (!siteNav.contains(evt.target) && navToggler !== evt.target) {
-    // Close all menus if you click outside of menu
-    allMenus.forEach((menu) => {
-      menu.classList.replace('flex', 'hidden');
-    });
-
-    navMenuTriggers.forEach((trigger) => {
-      trigger.setAttribute('aria-expanded', 'false');
-    });
-  }
-});
+}
